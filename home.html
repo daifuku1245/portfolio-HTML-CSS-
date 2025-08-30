@@ -4,59 +4,226 @@
     <!--
       ファイル情報
       プロジェクト : カフェLP（ポートフォリオ用）
-      ファイル名   : index.html
+      ファイル名   : home.html
       作成者       : daifuku1245
       作成日       : 2025-08-30
       バージョン   : 1.0.0
       変更履歴     : 2025-08-30 新規作成
     -->
+    <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8" />
-    <!--タブレット用設定-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--ページ説明文-->
-    <meta name="description" content="自家焙煎コーヒーと手作りスイーツを提供するカフェのランディングページ。ポートフォリオ用に制作したサンプルサイトです。" />
-    <title>ポートフォリオ用ページ</title>
+    <meta name="description" content="自家焙煎コーヒーと手作りスイーツを提供するカフェのランディングページ（ポートフォリオ用）。" />
+    <title>Cafe LP | Portfolio</title>
   </head>
   <body>
-    <!--ヘッダー-->
-    <header>
+    <a href="#main" class="skip-link">本文へスキップ</a>
+
+    <!-- ================= ヘッダー ================= -->
+    <header role="banner">
+      <div class="container">
+        <!-- ロゴ + タグライン（縦並び、navはこの右側に配置） -->
         <div class="branding">
-            <a href="#" aria-label="トップページへ">
-                <img src="photo/logo.jpg" alt="ロゴ" style="width:300px; height:auto;">
-                <p class="tagline">心地よい一杯を、あなたに。</p>
-            </a>
+          <a href="/" class="logo-link" aria-label="トップページへ">
+            <!-- 例: img/logo.svg または img/logo.png に差し替え -->
+            <img src="img/logo.jpg" alt="Cafe ロゴ" />
+          </a>
+          <p class="tagline">心地よい一杯を、あなたに。</p>
         </div>
-        <!--ナビゲーション-->
-        <nav>
-            <ul>
-                <li><a href="#about">私たちについて</a></li>
-                <li><a href="#menu">メニュー</a></li>
-                <li><a href="#gallery">ギャラリー</a></li>
-                <li><a href="#access">アクセス</a></li>
-                <li><a href="#hours">営業時間</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-                <li><a href="#reservation" class="cta">予約</a></li>
-            </ul>
+
+        <nav aria-label="主要ナビゲーション">
+          <ul class="nav-list">
+            <li><a href="#about">私たちについて</a></li>
+            <li><a href="#menu">メニュー</a></li>
+            <li><a href="#gallery">ギャラリー</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#hours">営業時間</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#reservation" class="cta">予約</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <main id="main">
-        <section id="hero" aria-label="ヒーローセクション">
-        <h1>あなたの街のカフェ</h1>
-        <p>自家焙煎コーヒーと手作りスイーツで、ほっと一息。</p>
-        <p><a href="#reservation">席を予約する</a> / <a href="#menu">メニューを見る</a></p>
-        <!-- 背景画像はCSSで設定予定 -->
+    <!-- ================= メイン ================= -->
+    <main id="main" tabindex="-1">
+      <!-- ヒーロー -->
+      <section id="hero">
+        <div class="container">
+          <h1>あなたの街のカフェ</h1>
+          <p>自家焙煎コーヒーと手作りスイーツで、ほっと一息。</p>
+          <p class="hero-actions">
+            <a href="#reservation" class="btn">席を予約する</a>
+            <a href="#menu" class="btn ghost">メニューを見る</a>
+          </p>
+        </div>
       </section>
 
-       <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">私たちについて</h2>
-        <ul>
-          <li>自家焙煎・スペシャルティコーヒー</li>
-          <li>季節のスイーツ</li>
-          <li>電源・Wi-Fi完備</li>
-        </ul>
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <h2>私たちについて</h2>
+          <ul class="bullet">
+            <li>自家焙煎・スペシャルティコーヒー</li>
+            <li>季節のスイーツ</li>
+            <li>電源・Wi-Fi完備</li>
+          </ul>
+        </div>
       </section>
 
+      <!-- Menu -->
+      <section id="menu">
+        <div class="container">
+          <h2>メニュー</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>ドリンク</h3>
+              <ul>
+                <li>ハンドドリップコーヒー</li>
+                <li>カフェラテ</li>
+                <li>季節のスペシャル</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>フード &amp; スイーツ</h3>
+              <ul>
+                <li>自家製チーズケーキ</li>
+                <li>クロワッサンサンド</li>
+                <li>季節のタルト</li>
+              </ul>
+            </article>
+          </div>
+          <p class="note"><a href="#contact">アレルギー情報について問い合わせる</a></p>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <div class="container">
+          <h2>こだわり</h2>
+          <ul class="bullet">
+            <li><strong>豆へのこだわり：</strong>産地と焙煎度合いを丁寧に選定。</li>
+            <li><strong>空間設計：</strong>お一人でもグループでも心地よく。</li>
+            <li><strong>テイクアウト：</strong>モバイルオーダー対応予定。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ギャラリー -->
+      <section id="gallery">
+        <div class="container">
+          <h2>ギャラリー</h2>
+          <div class="grid">
+            <!-- 実画像に差し替え（例: img/store01.jpg など） -->
+            <figure class="thumb"><img src="img/sample1.jpg" alt="店内の様子"></figure>
+            <figure class="thumb"><img src="img/sample2.jpg" alt="コーヒー抽出"></figure>
+            <figure class="thumb"><img src="img/sample3.jpg" alt="スイーツ"></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Access -->
+      <section id="access">
+        <div class="container">
+          <h2>アクセス</h2>
+          <address>
+            〒000-0000 東京都〇〇区〇〇 1-2-3<br />
+            最寄り駅：〇〇駅 徒歩5分
+          </address>
+          <a href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%A7%85&hl=ja&z=16" target="_blank" rel="noopener"aria-label="Googleマップで東京駅周辺を開く">地図を大きく見る</a>
+          <div class="map-wrap">
+            <iframe class="map-iframe" src="https://maps.google.com/maps?q=35.681236,139.767125&hl=ja&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="東京駅周辺の地図"></iframe> 
+          </div>
+        </div>
+      </section>
+
+      <!-- Hours -->
+      <section id="hours">
+        <div class="container">
+          <h2>営業時間</h2>
+          <table>
+            <thead>
+              <tr><th scope="col">曜日</th><th scope="col">時間</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">平日</th><td><time datetime="08:00">8:00</time>–<time datetime="20:00">20:00</time></td></tr>
+              <tr><th scope="row">土日祝</th><td><time datetime="09:00">9:00</time>–<time datetime="19:00">19:00</time></td></tr>
+              <tr><th scope="row">定休日</th><td>水曜</td></tr>
+            </tbody>
+          </table>
+          <p class="note">ラストオーダーは閉店30分前。</p>
+        </div>
+      </section>
+
+      <!-- Reservation -->
+      <section id="reservation">
+        <div class="container">
+          <h2>予約</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>ご予約情報</legend>
+              <label for="r-name">お名前</label>
+              <input id="r-name" name="name" type="text" required />
+
+              <label for="r-date">日付</label>
+              <input id="r-date" name="date" type="date" required />
+
+              <label for="r-time">時間</label>
+              <input id="r-time" name="time" type="time" required />
+
+              <label for="r-people">人数</label>
+              <input id="r-people" name="people" type="number" min="1" max="10" value="2" />
+
+              <label for="r-notes">備考</label>
+              <textarea id="r-notes" name="notes" rows="4"></textarea>
+
+              <button type="submit">送信</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <h2>お問い合わせ</h2>
+          <form action="#" method="post">
+            <label for="c-name">お名前</label>
+            <input id="c-name" name="name" type="text" required />
+
+            <label for="c-email">メール</label>
+            <input id="c-email" name="email" type="email" required />
+
+            <label for="c-message">内容</label>
+            <textarea id="c-message" name="message" rows="6" required></textarea>
+
+            <button type="submit">送信</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Notices -->
+      <aside id="notices">
+        <div class="container">
+          <h2>お知らせ</h2>
+          <ul>
+            <li><time datetime="2025-09-01">2025/09/01</time> グランドオープン予定</li>
+            <li><time datetime="2025-09-15">2025/09/15</time> 新メニュー登場</li>
+          </ul>
+        </div>
+      </aside>
     </main>
+
+    <!-- ================= フッター ================= -->
+    <footer role="contentinfo">
+      <div class="container">
+        <small>&copy; <span id="year">2025</span> あなたのカフェ（仮）</small>
+        <ul class="footer-links">
+          <li><a href="#privacy">プライバシーポリシー</a></li>
+          <li><a href="#terms">利用規約</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
